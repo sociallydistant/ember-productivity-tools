@@ -1,0 +1,60 @@
+.bg-danger-light {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.fixed-warning-indicator {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  animation: fadeIn 5s ease ;
+  -webkit-animation: fadeIn 5s ease ;
+  -moz-animation: fadeIn 5s ease ;
+  -o-animation: fadeIn 5s ease ;
+  -ms-animation: fadeIn 5s ease ;
+  z-index: 999999;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;}
+}
