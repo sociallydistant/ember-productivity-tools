@@ -1,0 +1,26 @@
+{{#let this.state.appConfig.environment as |env|}}
+  {{#if (and this.isShowingDisclaimer (not (eq env 'production')))}}
+    <div class="row m-0">
+      <div class="col text-dark text-center border-bottom border-danger bg-danger-light p-3">
+        {{#if (has-block)}}
+          {{yield}}
+        {{else}}
+          <p class="text-dark">This site is serving content for the <strong>{{env}}</strong> environment.</p>
+
+          {{#if (not (eq env 'staging'))}}
+            <p class="text-dark">If you are a tester please notify the development team of this message.</p>
+          {{else}}
+            <p class="text-dark">If you are a developer, this may mean you have deployed an incorrect environment build.</p>
+          {{/if}}
+
+          <button {{on 'click'(fn (mut this.isShowingDisclaimer) false)}} type="button" class="btn btn-danger my-1" name="button">Ok, Got it!</button>
+        {{/if}}
+      </div>
+    </div>
+  {{/if}}
+{{/let}}
+{{#if (not this.permanentlyDismiss)}}
+  {{#if (and (not this.isShowingDisclaimer) (not (eq env 'production')))}}
+    <FaIcon {{on 'click'(fn (mut this.isShowingDisclaimer) true)}} @icon="exclamation-circle" class="text-danger fixed-warning-indicator" style="{{{this.restoreIconPosition}}}" @size="2x"/>
+  {{/if}}
+{{/if}}

@@ -1,0 +1,1 @@
+export { default } from 'ember-productivity-tools/components/ept/content-banner/environment-disclaimer';
